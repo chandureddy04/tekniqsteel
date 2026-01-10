@@ -111,8 +111,8 @@ export default {
         "pulse-slow": "pulse-slow 2s ease-in-out infinite",
       },
       boxShadow: {
-        'custom': '0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -2px hsl(215 25% 15% / 0.1)',
-        'custom-lg': '0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -4px hsl(215 25% 15% / 0.1)',
+        'custom': '0 4px 6px -1px hsl(220 18% 15% / 0.1), 0 2px 4px -2px hsl(220 18% 15% / 0.1)',
+        'custom-lg': '0 10px 15px -3px hsl(220 18% 15% / 0.12), 0 4px 6px -4px hsl(220 18% 15% / 0.1)',
       },
     },
   },
