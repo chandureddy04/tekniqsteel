@@ -70,6 +70,16 @@
     --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
     --shadow-custom: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -2px hsl(215 25% 15% / 0.1);
     --shadow-custom-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -4px hsl(215 25% 15% / 0.1);
+    
+    /* Blue Glow Effects */
+    --glow-accent: 0 0 20px hsl(215 90% 50% / 0.3);
+    --glow-accent-lg: 0 0 40px hsl(215 90% 50% / 0.25), 0 0 80px hsl(215 90% 50% / 0.15);
+    --glow-accent-intense: 0 0 20px hsl(215 90% 50% / 0.5), 0 0 40px hsl(215 90% 50% / 0.3);
+    
+    /* Gradient Variables */
+    --gradient-accent: linear-gradient(135deg, hsl(215 90% 50%), hsl(220 95% 35%));
+    --gradient-accent-soft: linear-gradient(135deg, hsl(215 85% 96%), hsl(220 90% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 96%), hsl(215 85% 96% / 0.5));
   }
 
   .dark {
@@ -142,6 +152,16 @@
   .card {
     @apply bg-card rounded-xl shadow-sm p-6 lg:p-8 border border-border/50;
   }
+  
+  /* Card with Glow on Hover */
+  .card-glow {
+    @apply bg-card rounded-xl shadow-sm p-6 lg:p-8 border border-border/50 transition-all duration-300;
+  }
+  
+  .card-glow:hover {
+    box-shadow: var(--glow-accent), var(--shadow-custom-lg);
+    border-color: hsl(var(--accent) / 0.3);
+  }
 
   /* Form Input Styles */
   .input-field {
@@ -153,7 +173,41 @@
 
   /* Text Gradient */
   .text-gradient {
-    @apply bg-gradient-to-r from-accent to-accent-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-accent to-accent-700 bg-clip-text text-transparent;
+  }
+  
+  /* Button Gradient */
+  .btn-gradient {
+    background: var(--gradient-accent);
+    @apply text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+    box-shadow: var(--glow-accent);
+  }
+  
+  .btn-gradient:hover {
+    box-shadow: var(--glow-accent-intense);
+    transform: translateY(-2px);
+  }
+  
+  /* Glowing Border */
+  .glow-border {
+    @apply border border-accent/30 rounded-xl;
+    box-shadow: var(--glow-accent);
+  }
+  
+  /* Glowing Icon Container */
+  .icon-glow {
+    @apply relative;
+  }
+  
+  .icon-glow::after {
+    content: '';
+    @apply absolute inset-0 rounded-full opacity-0 transition-opacity duration-300;
+    background: hsl(var(--accent) / 0.2);
+    filter: blur(10px);
+  }
+  
+  .icon-glow:hover::after {
+    opacity: 1;
   }
 
   /* Transition Smooth */
@@ -168,6 +222,19 @@
 
   .shadow-custom-lg {
     box-shadow: var(--shadow-custom-lg);
+  }
+  
+  /* Glow Shadows */
+  .shadow-glow {
+    box-shadow: var(--glow-accent);
+  }
+  
+  .shadow-glow-lg {
+    box-shadow: var(--glow-accent-lg);
+  }
+  
+  .shadow-glow-intense {
+    box-shadow: var(--glow-accent-intense);
   }
 }
 
@@ -235,7 +302,30 @@
 
   /* Gradient Backgrounds */
   .gradient-hero {
-    @apply bg-gradient-to-br from-primary-50 to-primary-100;
+    background: var(--gradient-hero);
+    @apply relative overflow-hidden;
+  }
+  
+  .gradient-hero::before {
+    content: '';
+    @apply absolute inset-0 opacity-30;
+    background: radial-gradient(ellipse at 70% 20%, hsl(var(--accent) / 0.15) 0%, transparent 50%);
+  }
+  
+  /* Gradient Accent Background */
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-accent-soft {
+    background: var(--gradient-accent-soft);
+  }
+  
+  /* Blue Orb Effect */
+  .blue-orb {
+    @apply absolute rounded-full pointer-events-none;
+    background: radial-gradient(circle, hsl(var(--accent) / 0.3) 0%, transparent 70%);
+    filter: blur(40px);
   }
 }
 

@@ -7,7 +7,11 @@ import { StatBadge } from '@/components/ui/StatBadge';
 export const HeroSection = () => {
   return (
     <section className="relative gradient-hero overflow-hidden" aria-labelledby="hero-heading">
-      <div className="container-max py-16 lg:py-24">
+      {/* Decorative Blue Orbs */}
+      <div className="blue-orb w-96 h-96 -top-48 -right-48" />
+      <div className="blue-orb w-64 h-64 bottom-20 -left-32" />
+      
+      <div className="container-max py-16 lg:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="space-y-8">
@@ -34,7 +38,7 @@ export const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent-600 text-accent-foreground">
+              <Button asChild size="lg" className="btn-gradient">
                 <Link to="/contact">
                   Request Quote
                   <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
@@ -45,7 +49,7 @@ export const HeroSection = () => {
 
           {/* Hero Image */}
           <div className="relative">
-            <div className="bg-card rounded-2xl shadow-custom-lg p-8 aspect-square flex items-center justify-center relative overflow-hidden">
+            <div className="bg-card rounded-2xl shadow-custom-lg p-8 aspect-square flex items-center justify-center relative overflow-hidden glow-border">
               <div className="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl flex items-center justify-center relative overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop"
