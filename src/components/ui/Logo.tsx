@@ -1,86 +1,26 @@
 import { cn } from '@/lib/utils';
+import tekniqLogo from '@/assets/tekniq-logo.png';
 
 interface LogoProps {
   className?: string;
   showText?: boolean;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-export const Logo = ({ className, showText = false }: LogoProps) => {
+export const Logo = ({ className, showText = false, size = 'md' }: LogoProps) => {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
+  };
+
   return (
     <div className={cn("flex items-center", className)}>
-      <svg 
-        viewBox="0 0 100 110" 
-        className="w-12 h-12"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Hexagon outer border - Forge Orange */}
-        <polygon 
-          points="50,2 95,27 95,77 50,102 5,77 5,27" 
-          fill="none" 
-          stroke="hsl(22, 95%, 45%)" 
-          strokeWidth="4"
-          className="drop-shadow-sm"
-        />
-        
-        {/* Inner hexagon fill - Orange glow */}
-        <polygon 
-          points="50,8 89,30 89,74 50,96 11,74 11,30" 
-          fill="hsl(25, 95%, 53%)"
-          opacity="0.15"
-        />
-        
-        {/* White inner border */}
-        <polygon 
-          points="50,12 85,32 85,72 50,92 15,72 15,32" 
-          fill="none" 
-          stroke="white" 
-          strokeWidth="2"
-          opacity="0.8"
-        />
-        
-        {/* Arrow/roof at top */}
-        <polygon 
-          points="50,18 62,28 38,28" 
-          fill="hsl(210, 10%, 60%)"
-        />
-        
-        {/* T letter - vertical stem */}
-        <rect 
-          x="42" 
-          y="28" 
-          width="8" 
-          height="40" 
-          fill="url(#steelGradient)"
-        />
-        
-        {/* T letter - horizontal top */}
-        <rect 
-          x="32" 
-          y="28" 
-          width="28" 
-          height="8" 
-          fill="url(#steelGradient)"
-        />
-        
-        {/* S letter - curved shape - Forge Orange */}
-        <path 
-          d="M55,45 Q70,45 70,55 Q70,65 55,65 Q55,65 55,75 Q55,82 70,82" 
-          fill="none" 
-          stroke="hsl(25, 95%, 50%)" 
-          strokeWidth="8" 
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        
-        {/* Gradient definitions */}
-        <defs>
-          <linearGradient id="steelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="hsl(210, 10%, 75%)" />
-            <stop offset="50%" stopColor="hsl(210, 10%, 55%)" />
-            <stop offset="100%" stopColor="hsl(210, 10%, 65%)" />
-          </linearGradient>
-        </defs>
-      </svg>
+      <img 
+        src={tekniqLogo} 
+        alt="Tekniq Steel Logo" 
+        className={cn(sizeClasses[size], "object-contain")}
+      />
       
       {showText && (
         <div className="ml-2">
