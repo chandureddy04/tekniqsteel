@@ -3,13 +3,14 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FeatureBadge } from '@/components/ui/FeatureBadge';
 import { StatBadge } from '@/components/ui/StatBadge';
+import heroImage from '@/assets/hero-steel-fabrication.jpg';
 
 export const HeroSection = () => {
   return (
     <section className="relative gradient-hero overflow-hidden" aria-labelledby="hero-heading">
-      {/* Decorative Blue Orbs */}
-      <div className="blue-orb w-96 h-96 -top-48 -right-48" />
-      <div className="blue-orb w-64 h-64 bottom-20 -left-32" />
+      {/* Decorative Forge Orbs */}
+      <div className="forge-orb w-96 h-96 -top-48 -right-48" />
+      <div className="forge-orb w-64 h-64 bottom-20 -left-32" />
       
       <div className="container-max py-16 lg:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -49,30 +50,16 @@ export const HeroSection = () => {
 
           {/* Hero Image */}
           <div className="relative">
-            <div className="bg-card rounded-2xl shadow-custom-lg p-8 aspect-square flex items-center justify-center relative overflow-hidden glow-border">
-              <div className="w-full h-full bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl flex items-center justify-center relative overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop"
-                  alt="3D steel structure model showcasing precision structural detailing"
-                  className="w-full h-full object-cover rounded-xl"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-primary/20 rounded-xl flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center animate-pulse-slow">
-                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-sm font-semibold">Interactive 3D Model</p>
-                    <p className="text-xs opacity-90">Click to explore</p>
-                  </div>
-                </div>
-              </div>
-              <StatBadge value="25+ Projects" label="" variant="accent" position="top-right" />
-              <StatBadge value="15+ Years" label="" variant="success" position="bottom-left" />
+            <div className="bg-card rounded-2xl shadow-custom-lg overflow-hidden glow-border">
+              <img
+                src={heroImage}
+                alt="Steel fabrication workshop with welding sparks and industrial machinery"
+                className="w-full h-auto object-cover aspect-video"
+                loading="eager"
+              />
             </div>
+            <StatBadge value="25+ Projects" label="" variant="accent" position="top-right" />
+            <StatBadge value="15+ Years" label="" variant="success" position="bottom-left" />
           </div>
         </div>
       </div>
