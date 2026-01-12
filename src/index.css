@@ -6,39 +6,39 @@
 
 @layer base {
   :root {
-    /* Industrial Steel Palette */
-    --background: 220 14% 96%;
-    --foreground: 220 20% 12%;
+    /* Forge Orange & Dark Steel Palette */
+    --background: 220 12% 96%;
+    --foreground: 220 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 12%;
+    --card-foreground: 220 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 12%;
+    --popover-foreground: 220 20% 10%;
 
-    /* Gunmetal Steel Primary */
-    --primary: 220 18% 20%;
+    /* Dark Steel Primary */
+    --primary: 220 15% 18%;
     --primary-foreground: 0 0% 100%;
-    --primary-50: 220 15% 96%;
-    --primary-100: 220 14% 91%;
-    --primary-200: 220 13% 84%;
+    --primary-50: 220 12% 96%;
+    --primary-100: 220 10% 90%;
+    --primary-200: 220 10% 82%;
 
-    /* Slate Gray Secondary */
-    --secondary: 220 10% 92%;
-    --secondary-foreground: 220 18% 22%;
-    --secondary-500: 220 10% 50%;
-    --secondary-600: 220 12% 40%;
-    --secondary-700: 220 15% 30%;
+    /* Steel Gray Secondary */
+    --secondary: 220 8% 92%;
+    --secondary-foreground: 220 15% 20%;
+    --secondary-500: 220 8% 50%;
+    --secondary-600: 220 10% 40%;
+    --secondary-700: 220 12% 28%;
 
-    --muted: 220 12% 94%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 8% 48%;
 
-    /* Industrial Blue Accent - professional, trustworthy */
-    --accent: 215 90% 50%;
+    /* Forge Orange Accent - welding heat, molten metal */
+    --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
-    --accent-100: 215 85% 96%;
-    --accent-600: 218 92% 42%;
-    --accent-700: 220 95% 35%;
+    --accent-100: 30 100% 96%;
+    --accent-600: 22 95% 48%;
+    --accent-700: 18 95% 42%;
 
     /* Success - Industrial Green */
     --success: 158 64% 40%;
@@ -47,78 +47,78 @@
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 215 90% 50%;
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
+    --ring: 25 95% 53%;
 
     --radius: 0.5rem;
 
     /* Surface Colors */
-    --surface: 220 14% 97%;
+    --surface: 220 12% 97%;
 
     /* Sidebar */
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 20% 12%;
-    --sidebar-primary: 220 18% 20%;
+    --sidebar-foreground: 220 20% 10%;
+    --sidebar-primary: 220 15% 18%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 14% 96%;
-    --sidebar-accent-foreground: 220 20% 12%;
-    --sidebar-border: 220 13% 88%;
-    --sidebar-ring: 215 90% 50%;
+    --sidebar-accent: 220 12% 96%;
+    --sidebar-accent-foreground: 220 20% 10%;
+    --sidebar-border: 220 10% 88%;
+    --sidebar-ring: 25 95% 53%;
 
     /* Custom Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
-    --shadow-custom: 0 4px 6px -1px hsl(215 25% 15% / 0.1), 0 2px 4px -2px hsl(215 25% 15% / 0.1);
-    --shadow-custom-lg: 0 10px 15px -3px hsl(215 25% 15% / 0.1), 0 4px 6px -4px hsl(215 25% 15% / 0.1);
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.05);
+    --shadow-custom: 0 4px 6px -1px hsl(220 15% 15% / 0.1), 0 2px 4px -2px hsl(220 15% 15% / 0.1);
+    --shadow-custom-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.1), 0 4px 6px -4px hsl(220 15% 15% / 0.1);
     
-    /* Blue Glow Effects */
-    --glow-accent: 0 0 20px hsl(215 90% 50% / 0.3);
-    --glow-accent-lg: 0 0 40px hsl(215 90% 50% / 0.25), 0 0 80px hsl(215 90% 50% / 0.15);
-    --glow-accent-intense: 0 0 20px hsl(215 90% 50% / 0.5), 0 0 40px hsl(215 90% 50% / 0.3);
+    /* Forge Orange Glow Effects */
+    --glow-accent: 0 0 20px hsl(25 95% 53% / 0.35);
+    --glow-accent-lg: 0 0 40px hsl(25 95% 53% / 0.3), 0 0 80px hsl(25 95% 53% / 0.15);
+    --glow-accent-intense: 0 0 20px hsl(25 95% 53% / 0.5), 0 0 40px hsl(25 95% 53% / 0.35);
     
     /* Gradient Variables */
-    --gradient-accent: linear-gradient(135deg, hsl(215 90% 50%), hsl(220 95% 35%));
-    --gradient-accent-soft: linear-gradient(135deg, hsl(215 85% 96%), hsl(220 90% 92%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 15% 96%), hsl(215 85% 96% / 0.5));
+    --gradient-accent: linear-gradient(135deg, hsl(30 95% 55%), hsl(18 95% 42%));
+    --gradient-accent-soft: linear-gradient(135deg, hsl(30 100% 96%), hsl(25 90% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 12% 96%), hsl(30 50% 96% / 0.5));
   }
 
   .dark {
-    --background: 220 18% 10%;
-    --foreground: 220 10% 96%;
+    --background: 220 15% 8%;
+    --foreground: 220 8% 96%;
 
-    --card: 220 16% 14%;
-    --card-foreground: 220 10% 96%;
+    --card: 220 12% 12%;
+    --card-foreground: 220 8% 96%;
 
-    --popover: 220 16% 14%;
-    --popover-foreground: 220 10% 96%;
+    --popover: 220 12% 12%;
+    --popover-foreground: 220 8% 96%;
 
-    --primary: 220 12% 92%;
-    --primary-foreground: 220 18% 15%;
+    --primary: 220 10% 92%;
+    --primary-foreground: 220 15% 12%;
 
-    --secondary: 220 14% 20%;
-    --secondary-foreground: 220 10% 96%;
+    --secondary: 220 12% 18%;
+    --secondary-foreground: 220 8% 96%;
 
-    --muted: 220 14% 20%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 220 12% 18%;
+    --muted-foreground: 220 8% 58%;
 
-    --accent: 215 90% 55%;
+    --accent: 25 95% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 20%;
-    --input: 220 14% 20%;
-    --ring: 215 90% 55%;
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 25 95% 58%;
 
-    --sidebar-background: 220 18% 12%;
-    --sidebar-foreground: 220 10% 96%;
-    --sidebar-primary: 220 12% 90%;
-    --sidebar-primary-foreground: 220 18% 12%;
-    --sidebar-accent: 220 14% 18%;
-    --sidebar-accent-foreground: 220 10% 96%;
-    --sidebar-border: 220 14% 20%;
-    --sidebar-ring: 215 90% 55%;
+    --sidebar-background: 220 15% 10%;
+    --sidebar-foreground: 220 8% 96%;
+    --sidebar-primary: 220 10% 90%;
+    --sidebar-primary-foreground: 220 15% 10%;
+    --sidebar-accent: 220 12% 16%;
+    --sidebar-accent-foreground: 220 8% 96%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 25 95% 58%;
   }
 }
 
@@ -321,10 +321,11 @@
     background: var(--gradient-accent-soft);
   }
   
-  /* Blue Orb Effect */
+  /* Forge Orb Effect */
+  .forge-orb,
   .blue-orb {
     @apply absolute rounded-full pointer-events-none;
-    background: radial-gradient(circle, hsl(var(--accent) / 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(var(--accent) / 0.35) 0%, transparent 70%);
     filter: blur(40px);
   }
 }

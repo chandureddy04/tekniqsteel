@@ -13,19 +13,19 @@ export const Logo = ({ className, showText = false }: LogoProps) => {
         className="w-12 h-12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Hexagon outer border */}
+        {/* Hexagon outer border - Forge Orange */}
         <polygon 
           points="50,2 95,27 95,77 50,102 5,77 5,27" 
           fill="none" 
-          stroke="hsl(215, 90%, 35%)" 
+          stroke="hsl(22, 95%, 45%)" 
           strokeWidth="4"
           className="drop-shadow-sm"
         />
         
-        {/* Inner hexagon fill */}
+        {/* Inner hexagon fill - Orange glow */}
         <polygon 
           points="50,8 89,30 89,74 50,96 11,74 11,30" 
-          fill="hsl(215, 90%, 50%)"
+          fill="hsl(25, 95%, 53%)"
           opacity="0.15"
         />
         
@@ -62,11 +62,11 @@ export const Logo = ({ className, showText = false }: LogoProps) => {
           fill="url(#steelGradient)"
         />
         
-        {/* S letter - curved shape using paths */}
+        {/* S letter - curved shape - Forge Orange */}
         <path 
           d="M55,45 Q70,45 70,55 Q70,65 55,65 Q55,65 55,75 Q55,82 70,82" 
           fill="none" 
-          stroke="hsl(215, 90%, 45%)" 
+          stroke="hsl(25, 95%, 50%)" 
           strokeWidth="8" 
           strokeLinecap="round"
           strokeLinejoin="round"
