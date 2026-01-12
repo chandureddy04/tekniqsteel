@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Logo } from '@/components/ui/Logo';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,10 +12,8 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 mr-2 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-heading font-bold text-lg">TS</span>
-              </div>
-              <div>
+              <Logo size="lg" />
+              <div className="ml-3">
                 <span className="text-xl font-heading font-bold">Tekniq Steel</span>
                 <p className="text-xs text-primary-foreground/70">Structural Excellence</p>
               </div>
