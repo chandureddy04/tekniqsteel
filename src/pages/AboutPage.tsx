@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Clock, CheckCircle, Target, Lightbulb, Handshake, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FeatureBadge } from '@/components/ui/FeatureBadge';
-
+import aboutHeroImage from '@/assets/about-hero-steel-team.jpg';
 const coreValues = [
   {
     icon: <Target className="w-8 h-8 text-accent" />,
@@ -80,16 +80,16 @@ const AboutPage = () => {
 
             {/* Hero Image */}
             <div className="relative">
-              <div className="bg-card rounded-2xl shadow-custom-lg p-8 aspect-square flex items-center justify-center relative overflow-hidden">
+              <div className="bg-card rounded-2xl shadow-custom-lg overflow-hidden glow-border">
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=800&auto=format&fit=crop"
-                  alt="Tekniq Steel team collaborating on structural steel project"
-                  className="w-full h-full object-cover rounded-xl"
+                  src={aboutHeroImage}
+                  alt="Tekniq Steel team working on 3D CAD structural steel drawings and SDS/2 modeling"
+                  className="w-full h-auto object-cover aspect-video"
                   loading="eager"
                 />
-                <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg shadow-lg">
-                  <p className="text-sm font-bold">Founded 2025</p>
-                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg shadow-lg z-10">
+                <p className="text-sm font-bold">Founded 2025</p>
               </div>
             </div>
           </div>
