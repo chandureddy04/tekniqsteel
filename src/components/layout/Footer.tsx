@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className="flex items-center mb-4">
               <Logo size="lg" />
               <div className="ml-3">
-                <span className="text-xl font-heading font-bold">Tekniq Steel</span>
+                <span className="text-xl font-heading font-bold">TEKNIQ STEEL</span>
                 <p className="text-xs text-primary-foreground/70">Structural Excellence</p>
               </div>
             </div>

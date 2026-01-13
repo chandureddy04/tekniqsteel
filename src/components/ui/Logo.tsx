@@ -16,15 +16,15 @@ export const Logo = ({ className, showText = false, size = 'md' }: LogoProps) =>
 
   return (
     <div className={cn("flex items-center", className)}>
-      <img 
-        src={tekniqLogo} 
-        alt="Tekniq Steel Logo" 
+      <img
+        src={tekniqLogo}
+        alt="Tekniq Steel Logo"
         className={cn(sizeClasses[size], "object-contain")}
       />
-      
+
       {showText && (
         <div className="ml-2">
-          <span className="text-xl font-heading font-bold text-primary">Tekniq Steel</span>
+          <span className="text-xl font-heading font-bold text-primary">TEKNIQ STEEL</span>
           <p className="text-xs text-muted-foreground">Structural Excellence</p>
         </div>
       )}
