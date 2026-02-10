@@ -36,7 +36,7 @@ const AboutPage = () => {
     <Layout>
       <SEOHead
         title="About Us - Tekniq Steel | Expert Team & Company Story"
-        description="Learn about Tekniq Steel — newly founded in 2025 with 15+ years of team experience in Structural & Miscellaneous Steel Detailing, 3D modeling (SDS/2), and BIM coordination."
+        description="Learn about Tekniq Steel - founded in 2025 with 15+ years of team experience in Structural & Miscellaneous Steel Detailing, 3D modeling (SDS/2), and BIM coordination."
         canonicalUrl="https://tekniqsteel.com/about"
         jsonLd={jsonLd}
       />
