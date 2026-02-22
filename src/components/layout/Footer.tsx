@@ -30,13 +30,13 @@ export const Footer = () => {
                 <Mail className="w-5 h-5 mr-3" aria-hidden="true" />
                 sales@tekniqsteel.com
               </a>
-              {/* <a
-                href="tel:+91-XXXXXXXXXX"
+              <a
+                href="tel:813-544-1047"
                 className="flex items-center text-primary-foreground/80 hover:text-accent transition-smooth"
               >
                 <Phone className="w-5 h-5 mr-3" aria-hidden="true" />
-                +91-XXXXXXXXXX
-              </a> */}
+                813-544-1047
+              </a>
               {/* <div className="flex items-center text-primary-foreground/80">
                 <MapPin className="w-5 h-5 mr-3" aria-hidden="true" />
                 Remote Services Worldwide
