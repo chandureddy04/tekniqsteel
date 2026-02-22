@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: <Phone className="w-6 h-6" />,
     title: 'Phone',
-    value: '+91-XXXXXXXXXX',
-    href: 'tel:+91-XXXXXXXXXX',
+    value: '813-544-1047',
+    href: 'tel:813-544-1047',
   },
   {
     icon: <MapPin className="w-6 h-6" />,
@@ -118,7 +118,7 @@ const ContactPage = () => {
       <section className="gradient-hero py-16" aria-labelledby="contact-hero">
         <div className="container-max">
           <header className="text-center max-w-4xl mx-auto">
-            <h1 
+            <h1
               id="contact-hero"
               className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-6"
             >
@@ -132,7 +132,7 @@ const ContactPage = () => {
             {/* Key Benefits */}
             <div className="grid md:grid-cols-3 gap-6">
               {['24-Hour Response', 'Free Consultation', 'Accurate Estimates'].map((benefit, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center justify-center bg-card px-4 py-3 rounded-lg shadow-sm border border-border/50"
                 >
@@ -153,7 +153,7 @@ const ContactPage = () => {
             <div className="lg:col-span-2">
               <div className="card">
                 <div className="mb-8">
-                  <h2 
+                  <h2
                     id="form-heading"
                     className="text-2xl font-heading font-bold text-primary mb-4"
                   >
@@ -213,7 +213,7 @@ const ContactPage = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+91-XXXXXXXXXX"
+                        placeholder="813-544-1047"
                         required
                       />
                     </div>
@@ -234,8 +234,8 @@ const ContactPage = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="role">Your Role *</Label>
-                      <Select 
-                        value={formData.role} 
+                      <Select
+                        value={formData.role}
                         onValueChange={(value) => handleSelectChange('role', value)}
                       >
                         <SelectTrigger>
@@ -256,8 +256,8 @@ const ContactPage = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="projectType">Building Type *</Label>
-                      <Select 
-                        value={formData.projectType} 
+                      <Select
+                        value={formData.projectType}
                         onValueChange={(value) => handleSelectChange('projectType', value)}
                       >
                         <SelectTrigger>
@@ -298,9 +298,9 @@ const ContactPage = () => {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
+                  <Button
+                    type="submit"
+                    size="lg"
                     className="w-full bg-accent hover:bg-accent-600 text-accent-foreground"
                     disabled={isSubmitting}
                   >
@@ -323,7 +323,7 @@ const ContactPage = () => {
                       <div>
                         <h4 className="font-semibold text-primary mb-1">{info.title}</h4>
                         {info.href ? (
-                          <a 
+                          <a
                             href={info.href}
                             className="text-secondary-600 hover:text-accent transition-colors"
                           >
