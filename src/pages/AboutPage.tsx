@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { SEOHead, getOrganizationSchema } from '@/components/seo/SEOHead';
 import { CTASection } from '@/components/sections/CTASection';
@@ -5,7 +6,15 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, Clock, CheckCircle, Target, Lightbulb, Handshake, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FeatureBadge } from '@/components/ui/FeatureBadge';
-import aboutHeroImage from '@/assets/about-hero-steel-team.jpg';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import detailingImage from '@/assets/detailing image.jpeg';
+import fabricationImage from '@/assets/fabrication image.jpeg';
+
+const aboutCarouselImages = [
+  { src: detailingImage, alt: 'Tekniq Steel structural steel detailing 3D CAD drawings' },
+  { src: fabricationImage, alt: 'Tekniq Steel structural steel fabrication in progress' },
+];
 const coreValues = [
   {
     icon: <Target className="w-8 h-8 text-accent" />,
@@ -31,6 +40,9 @@ const coreValues = [
 
 const AboutPage = () => {
   const jsonLd = getOrganizationSchema();
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 3500, stopOnInteraction: false })
+  );
 
   return (
     <Layout>
@@ -48,7 +60,7 @@ const AboutPage = () => {
             {/* Hero Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 
+                <h1
                   id="about-hero"
                   className="text-4xl lg:text-6xl font-heading font-bold text-primary leading-tight"
                 >
@@ -78,15 +90,27 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Image Carousel */}
             <div className="relative">
               <div className="bg-card rounded-2xl shadow-custom-lg overflow-hidden glow-border">
-                <img
-                  src={aboutHeroImage}
-                  alt="Tekniq Steel team working on 3D CAD structural steel drawings and SDS/2 modeling"
-                  className="w-full h-auto object-cover aspect-video"
-                  loading="eager"
-                />
+                <Carousel
+                  opts={{ loop: true }}
+                  plugins={[autoplayPlugin.current]}
+                  className="w-full"
+                >
+                  <CarouselContent className="-ml-0">
+                    {aboutCarouselImages.map((image, index) => (
+                      <CarouselItem key={index} className="pl-0">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-auto object-cover aspect-video"
+                          loading={index === 0 ? 'eager' : 'lazy'}
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
               </div>
               <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg shadow-lg z-10">
                 <p className="text-sm font-bold">Founded 2025</p>
@@ -103,7 +127,7 @@ const AboutPage = () => {
             {/* Story Content */}
             <div className="space-y-8">
               <div>
-                <h2 
+                <h2
                   id="story-heading"
                   className="text-3xl lg:text-4xl font-heading font-bold text-primary mb-6"
                 >
@@ -156,7 +180,7 @@ const AboutPage = () => {
       <section className="section-padding bg-card" aria-labelledby="expertise-heading">
         <div className="container-max">
           <header className="text-center mb-16">
-            <h2 
+            <h2
               id="expertise-heading"
               className="text-3xl lg:text-4xl font-heading font-bold text-primary mb-4"
             >
@@ -176,7 +200,7 @@ const AboutPage = () => {
               'Educational Buildings',
               'Mixed-Use Developments',
             ].map((expertise, index) => (
-              <div 
+              <div
                 key={index}
                 className="flex items-center p-4 bg-surface rounded-lg border border-border/50"
               >

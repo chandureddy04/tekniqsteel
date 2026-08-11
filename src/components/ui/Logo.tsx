@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import tekniqLogo from '@/assets/tekniq-logo.png';
+import tekniqLogo from '@/assets/tekniq-logo.jpeg';
 
 interface LogoProps {
   className?: string;
